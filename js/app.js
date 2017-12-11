@@ -29,13 +29,16 @@ Find the element with the class name of "profile":
 	- Replace the content with a verse from your favorite Prince song
 	- Change the styles of the font-family to Sans Serif
 */
-var x = document.getElementByClassName("profile");
-document.getElementByClassName("profile").innerHTML = "Purple rain, purple rain"
+
+document.getElementsByClassName("profile")[0].innerHTML = "Purple rain, purple rain" ;
+document.getElementsByClassName("profile")[0].style.fontFamily = "Sans Serif" ;
+
 /*5. Bruce Lee
 
 Find the element with the class name of "profile":
 	- Replace the content with a quote from the legend himself
 */
+document.getElementsByClassName("profile")[1].innerHTML = "A goal is not always meant to be reached, it often serves simply as something to aim at." ;
 
 
 
@@ -44,7 +47,7 @@ Find the element with the class name of "profile":
 Find the element with the class name of "alias": 
 	- Replace the content with your favorite character that Sammy portrayed
 */
-
+document.getElementsByClassName("alias")[2].innerHTML = "Nick Fury" ;
 
 
 /*7. Peter Griffin
@@ -54,13 +57,25 @@ Create a div element and give it an id of "name7":
 	- Append this div element to the element with id "nameParent"
 */
  
-/*8. Tim Duncan
+
+
+var pG = document.createElement("div") ;
+pG.id = "name7" ;
+pG.innerHTML = "Peter Griffin" ;
+document.getElementById("nameParent").appendChild(pG);
+
+ /*8. Tim Duncan
 
 Create a div element give it an id of "alias8":
 	- Inside this div element, give it the contents of "Old Man Riverwalk"
 	- Append this div element to the element with id "aliasParent"
 */
+var timCreate = document.createElement("div") ;
+timCreate.id = "alias8" ;
+timCreate.innerHTML = "Old Man Riverwalk" ;
+document.getElementById("aliasParent").appendChild(timCreate);
 
 //Final Boss
 /*9. Without modifying the HTML file, create your own profile.*/
 
+var myOwn = document.createElement("div");
